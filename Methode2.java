@@ -28,7 +28,7 @@ public class Methode2 {
         Scanner lire = new Scanner(System.in);
         Random rand = new Random();
         //System.out.println(rand.ints(10, 100));
-        int n = 500;
+        int n = 7000;
         int[] tab = new int[n];
 
         for (int i = 0; i < n; i++){

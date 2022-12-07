@@ -7,14 +7,15 @@ public class Methode1 {
         Scanner lire = new Scanner(System.in);
         Random rand = new Random();
         //System.out.println(rand.ints(10, 100));
-        int n = 8500;
+        int n = 20000;
         double a = 20000;double b = 0;
 
         double[] tab = new double[n];
 
         for (int i = 0; i < n; i++){
 
-          tab[i] = i ;
+          //tab[i] = i ;
+          tab[i] = Math.random() * (a - b + 1) + b;
       }
 
       long first = System.nanoTime();

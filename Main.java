@@ -25,7 +25,8 @@ public class Main {
         System.out.println("Largest element in the array: " + result[0]);
         System.out.println("Second largest element in the array: " + result[1]);
         System.out.println(
-                "Total execution time for an array with " + size + " elements: " + elapsedTime + " nanosecond");
+                "Total execution time for an array with " + size + " elements: " +
+                        elapsedTime + " nanosecond");
 
     }
 }

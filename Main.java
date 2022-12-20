@@ -52,40 +52,43 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int method = 0;
+        while (method != 4) {
+            System.out.println("Choose the search approach: ");
+            System.out.println("1 - Brute Force");
+            System.out.println("2 - Divide and Conquer");
+            System.out.println("3 - Tournament");
+            System.out.println("");
+            System.out.println("Tap 4 to exist");
 
-        System.out.println("Choose the search approach: ");
-        System.out.println("1 - Brute Force");
-        System.out.println("2 - Divide and Conquer");
-        System.out.println("3 - Tournament");
+            // Get the chosen approach
+            method = input.nextInt();
 
-        // Get the chosen approach
-        int method = input.nextInt();
+            System.out.println("Enter the size of the array: ");
 
-        System.out.println("Enter the size of the array: ");
+            // Get the size
+            int size = input.nextInt();
 
-        // Get the size
-        int size = input.nextInt();
+            // Generate the array
+            int[] array = generateArray(size);
 
-        // Generate the array
-        int[] array = generateArray(size);
+            switch (method) {
+                case 1:
+                    bruteForce(array);
+                    break;
 
-        input.close();
+                case 2:
+                    divideAndConquer(array);
+                    break;
 
-        switch (method) {
-            case 1:
-                bruteForce(array);
-                break;
+                case 3:
+                    tournament(array);
+                    break;
 
-            case 2:
-                divideAndConquer(array);
-                break;
-
-            case 3:
-                tournament(array);
-                break;
-
-            default:
-                break;
+                default:
+                    break;
+            }
         }
+        input.close();
     }
 }

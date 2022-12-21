@@ -11,6 +11,7 @@ public class BruteForce {
         // second element of the array.
         int secondLargest = Math.min(arr[0], arr[1]);
 
+        // Start iterating from the index = 2.
         for (int i = 2; i < arr.length; i++) {
             if (arr[i] > largest) {
                 secondLargest = largest;
